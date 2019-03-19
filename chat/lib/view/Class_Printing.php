@@ -35,9 +35,11 @@ class Printing
             $stmt->bind_param('ds',  $last_message_id, $channel);
             $stmt->execute();
             $result=$stmt->get_result();
-			//Цикл
-		return $this->new_cyle->startCycleFetchAssocAndReturnJsonFromClassChatUsingMethodPrintingOutAndDontBeSoSeriousHaveANiceDay( $result);
-      }
+			//Цикл. В комментарии ниже историческое название метода
+	//return $this->new_cyle->startCycleFetchAssocAndReturnJsonFromClassChatUsingMethodPrintingOutAndDontBeSoSeriousHaveANiceDay( $result);
+		$this->new_cyle->FethcAssocArrayReturnJson($result);
+		
+    }
     public function printingOut($last_id, $channel)
       {
         $data = $this->fetchingOut($last_id, $channel);
