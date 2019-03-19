@@ -9,11 +9,9 @@ require_once './Class_ListChannels.php';
 require_once 'Class_Cycle.php';
 
 
-
 //Проверим имя канала через GET
 if(!isset($_GET['channel']) || empty($_GET['channel']))
 $_GET['channel'] = 'chat';
-
 
 
 class Printing
@@ -21,7 +19,9 @@ class Printing
     protected $connection = null;
     protected $fetch;
     protected $my_channel;
-	protected $new_cyle;
+    protected $new_cyle;
+	
+	
     public function __construct($mysql, $new_cyle)
       {
         $connection = $mysql->getConnection();
@@ -32,6 +32,7 @@ class Printing
         $this->connection = $mysql->getConnection();
 		$this->new_cyle=$new_cyle;
       }
+	
 	
     /*Запрашиваем последние 15 сообщений*/
     private function fetchingOut($last_message_id, $channel)
@@ -46,9 +47,9 @@ class Printing
             
 	//В комментарии ниже историческое название метода
 	//return $this->new_cyle->startCycleFetchAssocAndReturnJsonFromClassChatUsingMethodPrintingOutAndDontBeSoSeriousHaveANiceDay( $result);
-		
-		
+				
     }
+	
 	
     public function printingOut($last_id, $channel)
       {
@@ -57,12 +58,15 @@ class Printing
          return json_encode($this->new_cyle->FethcAssocArrayReturnJson($data));
       }
   }
+
+
 //Коннект к базе
 $connection_to = new Connect();
 //Новый контекст для цикла
 $new_cyle = new Cycle($array_for_cycle, $mybject);
 //Вывод
 $data          = new Printing($connection_to, $new_cyle);
+
 //Запрос последних сообщний. Парамерт номер последненего сообщения
 $newarr_data=$data->printingOut($_GET['last_message_id'],trim($_GET['channel']));
 print $newarr_data;
