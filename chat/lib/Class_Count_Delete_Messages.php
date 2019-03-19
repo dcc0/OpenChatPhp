@@ -1,4 +1,6 @@
 <?php
+//Дополнительно закрываем сраницу
+require_once __DIR__ . '/../linker/close_page.php';
 require_once __DIR__ .'/view/Class_ListChannels.php';
 
 //Проверим, что данные пришли 
