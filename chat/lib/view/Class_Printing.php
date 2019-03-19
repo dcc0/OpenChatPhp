@@ -15,7 +15,7 @@ class Printing
     protected $connection = null;
     protected $fetch;
     protected $my_channel;
-	protected $new_cyle;
+    protected $new_cyle;
     public function __construct($mysql, $new_cyle)
       {
         $connection = $mysql->getConnection();
