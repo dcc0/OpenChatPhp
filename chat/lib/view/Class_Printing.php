@@ -54,7 +54,7 @@ class Printing
     public function printingOut($last_id, $channel)
       {
         $data = $this->fetchingOut($last_id, $channel);
-        //Непосредственно цикл вывода в другом класса. Class_Cycle.php        
+        //Непосредственно цикл вывода из другого класса. Class_Cycle.php        
          return json_encode($this->new_cyle->FethcAssocArrayReturnJson($data));
       }
   }
