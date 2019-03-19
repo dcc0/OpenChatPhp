@@ -34,8 +34,9 @@ if ($_SERVER['REQUEST_URI']=='/chat/linker/linker.php')
   
 //Перенаправим при попытке вызвать из браузера
 if  ($_SERVER['REQUEST_URI'] == '/chat/conf/Class_Connect.php') 
-{ header("Location: ../index.php"); 
-exit();
+{
+    header("Location: ../index.php"); 
+    exit();
     
 }
 
