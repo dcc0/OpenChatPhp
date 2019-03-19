@@ -17,9 +17,20 @@ if ($_SERVER['REQUEST_URI']=='/chat/linker/linker.php')
   
   
   //Закрываем страницу отправки
-  if ($_SERVER['REQUEST_URI']=='/chat/lib/Count_Delete_Messages.php')
+  if ($_SERVER['REQUEST_URI']=='/chat/lib/Class_Count_Delete_Messages.php')
 {
     header("Location: ../../index.php");
     exit();
   }
+
+
+  //Закрываем страницу отправки
+  if ($_SERVER['REQUEST_URI']=='/chat/lib/Class_Send_Messages.php')
+{
+    header("Location: ../../index.php");
+    exit();
+ }
+  
+
+
 ?>
