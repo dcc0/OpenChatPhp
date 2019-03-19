@@ -126,7 +126,8 @@ class Cycle
 			print $this->j--;
 	}
 	//Цикл для JSON из Mysqli запроса
-	public function startCycleFetchAssocAndReturnJsonFromClassChatUsingMethodPrintingOutAndDontBeSoSeriousHaveANiceDay($fetch_assoc_arr) {
+	//Start method Return Json  From Class_Chat
+	public function FethcAssocArrayReturnJson($fetch_assoc_arr) {
 	// ...   /*Получаем массив*/
             while($this->myobject=$fetch_assoc_arr->fetch_assoc()) {
             $this->thejson[] = $this->myobject;
