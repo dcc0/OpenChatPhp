@@ -1,0 +1,13 @@
+Установка
+1) Закачайте файлы на сервер
+2) Отредактируйте chat/conf/Class_Connect.php
+3) Переименуйте _htaccess в .htaccess
+Сервер должен поддерживать mod rewrite
+4) База данных в chat.sql. Загрузите через phpmyadmin
+
+Installaton
+1) Upload files to your server
+2) Edit chat/conf/Class_Connect.php
+3) Raname _htaccess to .htaccess
+Server must support ModRewrite
+4) chat.sql is database example. You can use phpmyadmin for import
