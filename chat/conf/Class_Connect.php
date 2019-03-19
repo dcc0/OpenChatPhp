@@ -1,14 +1,13 @@
 <?php
-//Перенаправим при попытке вызвать из браузера
-if($_SERVER['REQUEST_URI'] == '/chat/conf/Class_Connect.php') { header("Location: ../index.php"); exit();}
+require_once __DIR__ . '/../linker/close_page.php';
 
 class Connect {
 
 	public static $link;
 	protected $host = 'localhost';
-	protected $user = 'root';
-	protected $password = '123';
-	protected $db_name = 'chat';
+	protected $user = 'u0643076_sneg';
+	protected $password = '?wZ545i9KcT3';
+	protected $db_name = 'u0643076_sneg';
 
     public function __construct () {
 
