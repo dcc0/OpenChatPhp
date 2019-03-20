@@ -1,5 +1,5 @@
 <?php
-//Дополнительно закрываем сраницу с компановщиком
+//Дополнительно закрываем сраницу с компоновщиком
 if ($_SERVER['REQUEST_URI']=='/chat/linker/linker.php')
 {
     header("Location: ../index.php");
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_URI']=='/chat/linker/linker.php')
  }
   
   
-//Перенаправим при попытке вызвать из браузера
+//Перенаправим при попытке вызвать из браузера класс соеденинения с базой
 if  ($_SERVER['REQUEST_URI'] == '/chat/conf/Class_Connect.php') 
 {
     header("Location: ../index.php"); 
