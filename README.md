@@ -1,10 +1,11 @@
 # OpenChat
 
-Open Chat Multichannel. Written: 2019. MSK.
+Open Chat Multichannel. Written: 2019. MSK. Многоканальный открытый веб-чат
 
-Functions 
 
-You can post:/Возможности публикаций
+Functions/Функции
+
+You can post:/Возможности публикации
 
 Messages/Сообщений
 
@@ -13,6 +14,8 @@ Images/Изображений
 Links/Ссылок
 
 Create Channels/Создание каналов.
+
+
 
 Stack/Технологии:
 
