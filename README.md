@@ -14,3 +14,4 @@ MysqLi (Prepared statements)
 Ajax (XMLHttp)
 HTML (html5)
 CSS (ccs3)
+<img src="null.gif">
