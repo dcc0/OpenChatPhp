@@ -32,7 +32,9 @@ HTML (html5)
 
 CSS (ccs3) 
 
-Минимум дизайна для самостоятельной настройки.
+
+Возможность использования в локальной сети - экономия трафика!. Минимум дизайна для самостоятельной настройки!
+
 
 <b>If you want to buy installation and support, you can write to this email: ivangavr777@gmail.com.
   
