@@ -23,13 +23,14 @@ Stack/Технологии:
 
 PHP (MVL (Closer to MVC) like, Object Oriented Programming. PHP7)
 
-MysqLi (Prepared statements - Отличная защита от sql-атак)
+MysqLi (Prepared statements - отличная защита от sql-атак)
 
 Ajax (XMLHttp)
 
 HTML (html5)
 
 CSS (ccs3) 
+
 Минимум дизайна для самостоятельной настройки.
 
 <b>If you want to buy installation and support, you can write to this email: ivangavr777@gmail.com
