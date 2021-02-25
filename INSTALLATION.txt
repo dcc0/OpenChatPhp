@@ -4,6 +4,7 @@
 3) Переименуйте _htaccess в .htaccess
 Сервер должен поддерживать mod rewrite
 4) База данных в chat.sql. Загрузите через phpmyadmin
+5) Пароль можно задать в строке в файле: OpenChatPhp/chat/lib/Class_Send_Messages.php, строка номер: 80
 
 Installaton
 1) Upload files to your server
@@ -11,3 +12,4 @@ Installaton
 3) Raname _htaccess to .htaccess
 Server must support ModRewrite
 4) chat.sql is database example. You can use phpmyadmin for import
+5) You can add a password in a file a file: OpenChatPhp/chat/lib/Class_Send_Messages.php, string number 80
