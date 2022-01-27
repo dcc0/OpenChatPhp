@@ -10,42 +10,15 @@ if (!isset($_GET['channel']) || empty ($_GET['channel'])) {
 
 class CountDeleteMessages
 {
-    protected $connection = null;
-    protected $del;
-    protected $my_channel;
-
-    public function __construct($mysql)
-    {
-        $connection = $mysql->getConnection();
-        if (is_null($connection)) {
-            throw new Exception('Нет соединения!');
-        }
-        $this->connection = $mysql->getConnection();
-    }
-
     /*Удалим лишние*/
-    public function deleteMessages($channel, $all_channels_array)
+    public static function deleteMessages(string $channel): void
     {
-        if (in_array($channel, $all_channels_array)) {
-            $this->my_channel = $channel;
-        } else {
-            $this->my_channel = 'chat';
-        }
-
-        //Количество сообщений
-        $messages = $this->connection->prepare("SELECT COUNT(*) FROM chat WHERE chatname = ?") or exit(' ');
-        $messages->bind_param('s', $this->my_channel);
-        $messages->execute();
-        $result = $messages->get_result();
-        $messages = $result->fetch_array();
-
-        if ($messages[0] > 15) {
-            $stmt = $this->connection->prepare("DELETE FROM chat WHERE chatname = ?  ORDER BY id ASC LIMIT 1") or exit('not ok');
-            $stmt->bind_param('s', $this->my_channel);
-            $stmt->execute();
+        // Классы можно вызывать из других классов, если ты не знал. Инс.
+        $my_channel = in_array($channel, ListChannels::getChannels()) ? $channel : 'chat';
+        // Количество сообщений
+        $messages = Database::connect()->query('select count(*) from chat where chatname = ?', $my_channel)->fetchColumn();
+        if ($messages > 15) {
+            Database::connect()->query('delete from chat where chatname = ? order by id limit 1');
         }
     }
 }
-
-$count_delete_object = new CountDeleteMessages($connection_to);
-$count_delete_object->deleteMessages(trim($_GET['channel']), $all_channels_array);

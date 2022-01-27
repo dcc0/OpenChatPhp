@@ -5,61 +5,30 @@ require_once __DIR__ . '/../../linker/close_page.php';
 require_once __DIR__ . '/../../conf/Class_Database.php';
 //Список каналов
 require_once './Class_ListChannels.php';
-//Класс вывода
-require_once 'Class_Cycle.php';
 
 //Проверим имя канала через GET
 if (!isset($_GET['channel']) || empty($_GET['channel'])) {
     $_GET['channel'] = 'chat';
 }
 
+// Вообще, получается, тут и класс не нужен, если на выхлопе у тебя идёт вывод на экран json_encode c базы данных. Инс.
 class Printing
 {
-    protected $connection = null;
-    protected $fetch;
-    protected $my_channel;
-    protected $new_cyle;
-
-    public function __construct($mysql, $new_cyle)
+    /**
+     * Я пытался понять, что делает Class_Cycle->FethcAssocArrayReturnJson(), но это сильнее меня.
+     * Берёт массив из БД и кодирует его? Зачем так изгаляться?
+     * Если я понял всё не так и сломал — отпиши, обсудим. Инс.
+     */
+    public static function printingOut($last_id, $channel)
     {
-        $connection = $mysql->getConnection();
-        if (is_null($connection)) {
-            throw new Exception('Нет соединения!');
-        }
-        $this->connection = $mysql->getConnection();
-        $this->new_cyle = $new_cyle;
-    }
-
-    /*Запрашиваем последние 15 сообщений*/
-    private function fetchingOut($last_message_id, $channel)
-    {
-        $this->my_channel = $channel;
-        //Запрос
-        $stmt = $this->fetch = $this->connection->prepare("SELECT * from chat WHERE id > ? AND chatname = ? ORDER by id ASC LIMIT 15");
-        $stmt->bind_param('ds', $last_message_id, $channel);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        return $result;
-
-        //В комментарии ниже историческое название метода
-        //return $this->new_cyle->startCycleFetchAssocAndReturnJsonFromClassChatUsingMethodPrintingOutAndDontBeSoSeriousHaveANiceDay( $result);
-    }
-
-    public function printingOut($last_id, $channel)
-    {
-        $data = $this->fetchingOut($last_id, $channel);
-        //Непосредственно цикл вывода из другого класса. Class_Cycle.php        
-        return json_encode($this->new_cyle->FethcAssocArrayReturnJson($data));
+        return json_encode(Database::connect()->query('select * from chat where id > ? and chatname = ? order by id limit 15', [$last_id, $channel])->fetchAll(PDO::FETCH_ASSOC));
     }
 }
 
-//Коннект к базе
-$connection_to = new Database();
-//Новый контекст для цикла
-$new_cyle = new Cycle($array_for_cycle, $mybject);
-//Вывод
-$data = new Printing($connection_to, $new_cyle);
+//Запрос последних сообщний. Параметр номер последнего сообщения.
+print Printing::printingOut($_GET['last_message_id'], trim($_GET['channel']));
 
-//Запрос последних сообщний. Парамерт номер последненего сообщения
-$newarr_data = $data->printingOut($_GET['last_message_id'], trim($_GET['channel']));
-print $newarr_data;
+// Обрати внимание, что эта страница ничего не делает!
+// Она буквально(!) выдаёт на экран данные из БД, которые никто не увидит,
+// потому что в первой строке у тебя close_page.php с редиректом куда-то там.
+// Инс.

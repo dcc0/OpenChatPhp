@@ -3,9 +3,6 @@
 require_once './conf/defines.php';
 //Коннект
 require_once CONF . 'Class_Database.php';
-//Основной Коннект
-$connection_to = new Database();
-$connection_to->getConnection();
 
 // Маршруты
 $routes = [
