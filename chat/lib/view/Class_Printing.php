@@ -2,7 +2,7 @@
 //Дополнительно закрываем сраницу
 require_once __DIR__ . '/../../linker/close_page.php';
 //Коннект
-require_once __DIR__ . '/../../conf/Class_Connect.php';
+require_once __DIR__ . '/../../conf/Class_Database.php';
 //Список каналов
 require_once './Class_ListChannels.php';
 //Класс вывода
@@ -61,7 +61,7 @@ class Printing
 
 
 //Коннект к базе
-$connection_to = new Connect();
+$connection_to = new Database();
 //Новый контекст для цикла
 $new_cyle = new Cycle($array_for_cycle, $mybject);
 //Вывод

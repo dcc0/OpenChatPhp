@@ -1,6 +1,6 @@
 <?php
 //Конфиг
-require_once __DIR__ . '/../../conf/Class_Connect.php';
+require_once __DIR__ . '/../../conf/Class_Database.php';
 
 
 //Показать список каналов
@@ -38,7 +38,7 @@ require_once __DIR__ . '/../../conf/Class_Connect.php';
         
 }
 //Коннеккт
-$connection_to = new Connect();
+$connection_to = new Database();
 $connection_to->getConnection();
     
 //Каналы    
