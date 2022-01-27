@@ -8,7 +8,7 @@ if(!isset($_GET['channel']) || empty ($_GET['channel']))
 $_GET['channel'] = 'chat';
 
 
-class Count_Delete_Messages
+class CountDeleteMessages
   {
     
     protected $connection = null;
@@ -68,7 +68,7 @@ class Count_Delete_Messages
     
   }
 
-$count_delete_object = new Count_Delete_Messages($connection_to);
+$count_delete_object = new CountDeleteMessages($connection_to);
 $count_delete_object->deleteMessages(trim($_GET['channel']), $all_channels_array);
 
 

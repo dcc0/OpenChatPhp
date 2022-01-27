@@ -33,7 +33,7 @@ else
 
 
 
-class Send_Messages
+class SendMessages
   {
 
 
@@ -101,7 +101,7 @@ class Send_Messages
 //Коннект к базе
 $connection_to = new Connect();
 /*Отправим сообщения*/
-$send_messages = new Send_Messages($connection_to);
+$send_messages = new SendMessages($connection_to);
 $send_messages->sendText(htmlspecialchars($gettext), $userlogin, trim($_GET['channel']), $all_channels_array, $pass);
 /*Удалим лишние*/
 require_once 'Class_Count_Delete_Messages.php';

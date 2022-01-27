@@ -2,7 +2,7 @@
 // Константы для директорий
 require_once './conf/defines.php';
 //Коннект
-require_once CONF.'Class_Connect.php';
+require_once CONF . 'Class_Connect.php';
 //Основной Коннект
 $connection_to = new Connect();
 $connection_to->getConnection();
