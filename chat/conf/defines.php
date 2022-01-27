@@ -1,8 +1,7 @@
 <?php
-define ("HTML", "./html/");
-define ("CONF", "./conf/");
-define ("STYLE", "./style/");
-define ("LIB", "./lib/");
-define ("LIBJS", "./lib/js/");
-define ("LINKER", "./linker/");
-
+const HTML = "./html/";
+const CONF = "./conf/";
+const STYLE = "./style/";
+const LIB = "./lib/";
+const LIBJS = "./lib/js/";
+const LINKER = "./linker/";

@@ -21,115 +21,142 @@
  *
  *
  */
-//namespace Cycle;
+
 class Cycle
 {
-	protected $i = 0;
-	protected $value = 0;
-	protected $thejson = array();
-	protected $mybject;
-	protected $mystring;
-	protected $j;
-	protected $temp;
-	protected $fetch_assoc_arr;
-	/**
-	 * Constructor of class Cycle.
-	 *
-	 * @return void
-	 */
-	public function __construct($array_for_cycle, $mybject)
-	{
-		if (!is_array($array_for_cycle))
-		  {
-            throw new Exception('Переменная array_for_cycle должна быть массивом!');
-          }
-          if (is_int($array_for_cycle[0]) && $array_for_cycle[0] < 0)
-		  {
-            throw new Exception('Нулевой аргумент должен быть числом > 0!');
-          }
-          if (is_int($array_for_cycle[1]) && $array_for_cycle[1] < 0)
-		  {
-            throw new Exception('Первый аргумент должен быть числом > 0!');
-          }
-		// ...
-	//Проверим пустой ли массив
-	if(!empty($mybject))
-		$this->mybject=$mybject;
-	//Проверка на массив
-	if (is_array($mybject))
-		$this->value = count($mybject);
-	//Проверка на строку
-	if (is_string($mybject))
-		$this->value = strlen($mybject);
-	//Если второй аргумент меньше первого, поменяем
-	if ($array_for_cycle[0] > $array_for_cycle[1]) {
-		$this->temp =	$array_for_cycle[1];
-		$array_for_cycle[1] = $array_for_cycle[0];
-		$array_for_cycle[0] = $this->temp;
-		}
-	if ($array_for_cycle[1] < $this->value && $array_for_cycle[1] > 0)
-		$this->value = $array_for_cycle[1];
-		//Для вывода в обратном порядке
-		$this->j = $this->value - 1;
-	}
+    protected $i = 0;
+    protected $value = 0;
+    protected $thejson = [];
+    protected $mybject;
+    protected $mystring;
+    protected $j;
+    protected $temp;
+    protected $fetch_assoc_arr;
+
+    /**
+     * Constructor of class Cycle.
+     *
+     * @return void
+     */
+    public function __construct($array_for_cycle, $mybject)
+    {
+        if (!is_array($array_for_cycle)) {
+            throw new \http\Exception\InvalidArgumentException('Переменная array_for_cycle должна быть массивом!');
+        }
+        if (is_int($array_for_cycle[0]) && $array_for_cycle[0] < 0) {
+            throw new \http\Exception\UnexpectedValueException('Нулевой аргумент должен быть числом > 0!');
+        }
+        if (is_int($array_for_cycle[1]) && $array_for_cycle[1] < 0) {
+            throw new \http\Exception\UnexpectedValueException('Первый аргумент должен быть числом > 0!');
+        }
+        // ...
+        //Проверим пустой ли массив
+        if (!empty($mybject)) {
+            $this->mybject = $mybject;
+        }
+        //Проверка на массив
+        if (is_array($mybject)) {
+            $this->value = count($mybject);
+        }
+        //Проверка на строку
+        if (is_string($mybject)) {
+            $this->value = strlen($mybject);
+        }
+        //Если второй аргумент меньше первого, поменяем
+        if ($array_for_cycle[0] > $array_for_cycle[1]) {
+            $this->temp = $array_for_cycle[1];
+            $array_for_cycle[1] = $array_for_cycle[0];
+            $array_for_cycle[0] = $this->temp;
+        }
+        if ($array_for_cycle[1] < $this->value && $array_for_cycle[1] > 0) {
+            $this->value = $array_for_cycle[1];
+        }
+        //Для вывода в обратном порядке
+        $this->j = $this->value - 1;
+    }
+
 //Напечатать значения
-	public function startCyclePrintValues () {
-	// ...
-			for ($this->i; $this->i < $this->value; $this->i++)
-			print $this->mybject[$this->i];
-	}
+    public function startCyclePrintValues()
+    {
+        // ...
+        for ($this->i; $this->i < $this->value; $this->i++) {
+            print $this->mybject[$this->i];
+        }
+    }
+
 //Напечатать ключи
-	public function startCyclePrintKeys () {
-	// ...
-			for ($this->i; $this->i < $this->value; $this->i++)
-			print $this->i;
-	}
+    public function startCyclePrintKeys()
+    {
+        // ...
+        for ($this->i; $this->i < $this->value; $this->i++) {
+            print $this->i;
+        }
+    }
+
 //Вернуть Json
-	public function startCycleReturnJson () {
-	// ...
-			for ($this->i; $this->i < $this->value; $this->i++)
-			$this->thejson[]=$this->mybject[$this->i];
-			return json_encode($this->thejson);
-	}
+    public function startCycleReturnJson()
+    {
+        // ...
+        for ($this->i; $this->i < $this->value; $this->i++) {
+            $this->thejson[] = $this->mybject[$this->i];
+        }
+        return json_encode($this->thejson);
+    }
+
 //Вернуть строкой
-	public function startCycleReturnString () {
-	// ...
-			for ($this->i; $this->i < $this->value; $this->i++)
-			$this->mystring.=$this->mybject[$this->i];
-			return $this->mystring;
-	}
+    public function startCycleReturnString()
+    {
+        // ...
+        for ($this->i; $this->i < $this->value; $this->i++) {
+            $this->mystring .= $this->mybject[$this->i];
+        }
+        return $this->mystring;
+    }
+
 //Вернуть строкой в Json
-	public function startCycleReturnJsonString () {
-	// ...
-			for ($this->i; $this->i < $this->value; $this->i++)
-			$this->mystring.=$this->mybject[$this->i];
-			return json_encode($this->mystring);
-	}
-	//Напечатать значения в обратном порядке
-	public function startCyclePrintValuesReversed () {
-	// ...
-			for ($this->i; $this->i < $this->value; $this->i++)
-			print $this->mybject[$this->j--];
-	}
-	//Напечатать ключи в обратном порядке
-	public function startCyclePrintKeysReversed () {
-	// ...
-			for ($this->i; $this->i < $this->value; $this->i++)
-			print $this->j--;
-	}
-	//Цикл для JSON из Mysqli запроса
-	//Start method Return Json  From Class_Chat
-	public function FethcAssocArrayReturnJson($fetch_assoc_arr) {
-	// ...   /*Получаем массив*/
-            while($this->myobject=$fetch_assoc_arr->fetch_assoc()) {
+    public function startCycleReturnJsonString()
+    {
+        // ...
+        for ($this->i; $this->i < $this->value; $this->i++) {
+            $this->mystring .= $this->mybject[$this->i];
+        }
+        return json_encode($this->mystring);
+    }
+
+    //Напечатать значения в обратном порядке
+    public function startCyclePrintValuesReversed()
+    {
+        // ...
+        for ($this->i; $this->i < $this->value; $this->i++) {
+            print $this->mybject[$this->j--];
+        }
+    }
+
+    //Напечатать ключи в обратном порядке
+    public function startCyclePrintKeysReversed()
+    {
+        // ...
+        for ($this->i; $this->i < $this->value; $this->i++) {
+            print $this->j--;
+        }
+    }
+    //Цикл для JSON из Mysqli запроса
+    //Start method Return Json  From Class_Chat
+    public function FethcAssocArrayReturnJson($fetch_assoc_arr)
+    {
+        // ...   /*Получаем массив*/
+        while ($this->myobject = $fetch_assoc_arr->fetch_assoc()) {
             $this->thejson[] = $this->myobject;
-            }
-            return $this->thejson;
-	}
+        }
+        return $this->thejson;
+    }
 }
+
 //Для цикла откуда начать и где закончить
-if (!isset($array_for_cycle))
-$array_for_cycle=array(0, 0);
+if (!isset($array_for_cycle)) {
+    $array_for_cycle = [0, 0];
+}
 //Массив, который требуется обойти циклом
-if (!isset($mybject))
-$mybject=array(0, 0);
+if (!isset($mybject)) {
+    $mybject = [0, 0];
+}
