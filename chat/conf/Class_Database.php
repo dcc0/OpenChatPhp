@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__ . '/../linker/close_page.php';
 
 class Database
 {

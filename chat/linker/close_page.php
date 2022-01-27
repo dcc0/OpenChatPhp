@@ -25,9 +25,3 @@ if ($_SERVER['REQUEST_URI'] == '/chat/lib/Class_Send_Messages.php') {
     header(INDEX_UP_TWO);
     exit();
 }
-
-//Перенаправим при попытке вызвать из браузера класс соеденинения с базой
-if ($_SERVER['REQUEST_URI'] == '/chat/conf/Class_Connect.php') {
-    header(INDEX_UP_ONE);
-    exit();
-}

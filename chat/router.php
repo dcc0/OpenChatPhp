@@ -2,7 +2,6 @@
 // Константы для директорий
 require_once './conf/defines.php';
 //Коннект
-require_once CONF . 'Class_Database.php';
 
 // Маршруты
 $routes = [

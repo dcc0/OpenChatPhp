@@ -12,6 +12,7 @@ require_once 'Class_Count_Delete_Messages.php';
 // Чтобы не проставлять значения по умолчанию через проверки в GET, имеет смысл проставить их прямо в классе. Инс.
 class SendMessages
 {
+    private const PASSWORD_MD5 = '36c07e47c3d7b0d2d48f2bc25d027f29';
     private static function setLogin(string $login = 'Пользователь'): string
     {
         return substr($login, 0, 35);
@@ -25,7 +26,7 @@ class SendMessages
     //Проверим канал в списке существующих, либо создадим, если пароль подошёл.
     private static function setChannel(string $channel, string $password): string
     {
-        return in_array($channel, ListChannels::getChannels()) || md5($password) === '36c07e47c3d7b0d2d48f2bc25d027f29' ? trim($channel) : 'chat';
+        return in_array($channel, ListChannels::getChannels()) || md5($password) === self::PASSWORD_MD5 ? trim($channel) : 'chat';
     }
 
     //Запишем в чат
