@@ -39,5 +39,3 @@ if  ($_SERVER['REQUEST_URI'] == '/chat/conf/Class_Connect.php')
     exit();
     
 }
-
-?>

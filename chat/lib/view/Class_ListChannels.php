@@ -44,6 +44,3 @@ $connection_to->getConnection();
 //Каналы    
 $get_channels = new ListChannels($connection_to);    
 $all_channels_array=$get_channels->getChannels();
-
-
-?>

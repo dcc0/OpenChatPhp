@@ -5,4 +5,4 @@ define ("STYLE", "./style/");
 define ("LIB", "./lib/");
 define ("LIBJS", "./lib/js/");
 define ("LINKER", "./linker/");
-?>
+

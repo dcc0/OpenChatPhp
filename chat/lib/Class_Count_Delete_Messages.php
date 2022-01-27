@@ -70,6 +70,3 @@ class CountDeleteMessages
 
 $count_delete_object = new CountDeleteMessages($connection_to);
 $count_delete_object->deleteMessages(trim($_GET['channel']), $all_channels_array);
-
-
-?>

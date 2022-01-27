@@ -65,4 +65,3 @@ $path = getRequestPath();
 $method = getMethod($routes, $path);
 
 echo $method();
-?>

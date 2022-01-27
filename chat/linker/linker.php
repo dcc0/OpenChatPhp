@@ -23,5 +23,3 @@ require_once LIBJS.'send.js';
 //Удаление BACKENED
 require_once LIB.'Class_Count_Delete_Messages.php';
 require_once STYLE.'footer.html';
-
-?>

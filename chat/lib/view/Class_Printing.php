@@ -70,4 +70,3 @@ $data          = new Printing($connection_to, $new_cyle);
 //Запрос последних сообщний. Парамерт номер последненего сообщения
 $newarr_data=$data->printingOut($_GET['last_message_id'],trim($_GET['channel']));
 print $newarr_data;
-?>

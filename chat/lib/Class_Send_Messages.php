@@ -99,10 +99,10 @@ class SendMessages
 
   }
 //Коннект к базе
-$connection_to = new Connect();
+Database::connect()->query();
+$connection_to = new Database();
 /*Отправим сообщения*/
 $send_messages = new SendMessages($connection_to);
 $send_messages->sendText(htmlspecialchars($gettext), $userlogin, trim($_GET['channel']), $all_channels_array, $pass);
 /*Удалим лишние*/
 require_once 'Class_Count_Delete_Messages.php';
-?>
