@@ -1,35 +1,19 @@
-<div   style="overflow-x: hidden;  width: 80%;  margin-left: auto;
-    margin-right: auto;" >
-<form  method="get"  onkeypress="if(event.keyCode == 13) return false;">
-		имя<br/>
-		<input type="text" id="userlogin" name="userlogin" size="100%" maxlength="50"><br/>
-		канал<br/>
-		<input type="text" id="channel" name="channel" size="100%" maxlength="50"><br/>
-		 пароль (для создания канала)<br/>
-		<input type="password" id="pass" name="pass" size="100%" maxlength="50"><br/>
-		сообщение<br/>
-		<input type="text" id="text" name="text" size="100%" onkeydown="checkKey(event)" maxlength="500"><br/>
-		<input  type="button" value="Отправить сообщение" onclick="loadDoc2()">
-</form>
+<div style="overflow-x: hidden;  width: 80%;  margin-left: auto;
+    margin-right: auto;">
+    <form method="get" onkeypress="if(event.keyCode == 13) return false;">
+        имя<br/>
+        <label for="userlogin"></label><input id="userlogin" maxlength="50" name="userlogin" size="100%" type="text"><br/>
+        канал<br/>
+        <label for="channel"></label><input id="channel" maxlength="50" name="channel" size="100%" type="text"><br/>
+        пароль (для создания канала)<br/>
+        <label for="pass"></label><input id="pass" maxlength="50" name="pass" size="100%" type="password"><br/>
+        сообщение<br/>
+        <label for="text"></label><input id="text" maxlength="500" name="text" onkeydown="checkKey(event)" size="100%" type="text"><br/>
+        <input onclick="loadDoc2()" type="button" value="Отправить сообщение">
+    </form>
 
-    <div id="canals_list" class="canals-list hidden">
-    Список каналов:
-    <a id="channel_l" href="javascript:void(0)" onclick="getText_author(this)" style="font-style: italic;"></a>
+    <div class="canals-list hidden" id="canals_list">
+        Список каналов:
+        <a href="javascript:void(0)" id="channel_l" onclick="getText_author(this)" style="font-style: italic;"></a>
+    </div>
 </div>
-</div>
-
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
-<br>    <br><br>    <br>
-<br><br><br><br><br><br>
-        <br><br>            <br>
-          <br>              <br>     
-<br><br><br><br><br><br><br><br>
- <br>     <br>
-          <br>
-          <br>
- <br><br><br><br><br><br>
-  <br>               <br>
-    <br>          <br>
-      <br>      <br>   
-    <br>           <br>

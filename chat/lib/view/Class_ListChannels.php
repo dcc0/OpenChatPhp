@@ -1,5 +1,4 @@
 <?php
-//Конфиг
 require_once __DIR__ . '/../../conf/Class_Database.php';
 
 //Показать список каналов
