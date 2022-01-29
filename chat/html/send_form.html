@@ -1,14 +1,14 @@
 <div style="overflow-x: hidden;  width: 80%;  margin-left: auto;
     margin-right: auto;">
-    <form method="get" onkeypress="if(event.keyCode == 13) return false;">
-        имя<br/>
-        <label for="userlogin"></label><input id="userlogin" maxlength="50" name="userlogin" size="100%" type="text"><br/>
-        канал<br/>
-        <label for="channel"></label><input id="channel" maxlength="50" name="channel" size="100%" type="text"><br/>
-        пароль (для создания канала)<br/>
-        <label for="pass"></label><input id="pass" maxlength="50" name="pass" size="100%" type="password"><br/>
-        сообщение<br/>
-        <label for="text"></label><input id="text" maxlength="500" name="text" onkeydown="checkKey(event)" size="100%" type="text"><br/>
+    <form onkeydown="if(event.keyCode === 13) return false;">
+        <label for="userlogin">имя<br></label>
+        <input id="userlogin" maxlength="50" name="userlogin" size="100%" type="text"><br>
+        <label for="channel">канал<br></label>
+        <input id="channel" maxlength="50" name="channel" size="100%" type="text"><br>
+        <label for="pass">пароль (для создания канала)<br></label>
+        <input id="pass" maxlength="50" name="pass" size="100%" type="password"><br>
+        <label for="text">сообщение<br></label>
+        <input id="text" maxlength="500" name="text" onkeydown="checkKey(event)" size="100%" type="text"><br>
         <input onclick="loadDoc2()" type="button" value="Отправить сообщение">
     </form>
 
