@@ -15,7 +15,7 @@ function loadDoc2() {
 }
 
 function checkKey(e) {
-    var inp = document.getElementById('text'), inp2 = document.getElementById('userlogin');
+    const inp = document.getElementById('text'), inp2 = document.getElementById('userlogin');
     if (e.keyCode === "13") {
         loadDoc2();
     }

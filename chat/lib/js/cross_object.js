@@ -53,7 +53,7 @@ function update() {
                 //Частный alert
                 let replace_bold_text = /([a-z]{1,7})(-&gt;)(.*)/,
                     replace_font_text = /(color)(-&gt;)([a-z]{1,7})(-&gt;)(.*)/,
-                    private_to = /(alert)(-&gt;)([a-zA-Z0-9А-яё-\-_ ]{1,100})(-&gt;)(.*)/,
+                    private_to = /(alert)(-&gt;)([a-zA-Z0-9А-я_ ]{1,100})(-&gt;)(.*)/,
                     private_login = document.getElementById('userlogin').value, thlogin, subst, withlink;
 
                 //Собираем то, что будет напечатано

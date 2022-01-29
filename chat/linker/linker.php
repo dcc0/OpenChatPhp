@@ -1,22 +1,11 @@
 <?php
-//Удаление BACKENED
-require_once LIB . 'Class_Messages.php';
-
-require_once STYLE . 'header.html';
-
-//Окно чата
-require_once HTML . 'div_updatebox.html';
-//Форма отправки BACKENED
-require_once HTML . 'send_form.html';
-
+require_once Config::define()->lib . 'Class_Messages.php';
+require_once Config::define()->style . 'header.html';
+require_once Config::define()->html . 'div_updatebox.html'; //Окно чата
+require_once Config::define()->html . 'send_form.html'; //Форма отправки BACKENED
 echo '<script>';
-//Показать список каналов JS FRONTED
-require_once(LIBJS . 'list_of_channels.js');
-//Скролл вниз FRONTEED
-require_once LIBJS . 'scroll_to_bottom.js';
-//Файл с сообщениями чата, 15 сообщ. каждые 3 сек
-require_once LIBJS . 'cross_object.js';
-//Отправка FRONTED
-require_once LIBJS . 'send.js';
+require_once Config::define()->libjs . 'list_of_channels.js'; //Показать список каналов JS FRONTED
+require_once Config::define()->libjs . 'scroll_to_bottom.js'; //Скролл вниз FRONTEED
+require_once Config::define()->libjs . 'cross_object.js'; //Файл с сообщениями чата, 15 сообщ. каждые 3 сек
+require_once Config::define()->libjs . 'send.js'; //Отправка FRONTED
 echo '</script>';
-

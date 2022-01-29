@@ -1,6 +1,6 @@
 <?php
 // Константы для директорий
-require_once './conf/defines.php';
+require_once 'conf/Class_Config.php';
 
 // Маршруты
 $routes = [
@@ -22,15 +22,15 @@ function getMethod(array $routes)
 // Функция для корня
 function index()
 {
-    require_once './linker/linker.php';
+    require_once Config::define()->linker . 'linker.php';
 }
 
 function linker()
 {
-    require_once './linker/linker.php';
+    require_once Config::define()->linker . 'linker.php';
 }
 
-function notFound()
+function notFound(): string
 {
     header("HTTP/1.0 404 Not Found");
     return 'Нет такой страницы';

@@ -1,34 +1,20 @@
 body {
     font-size: 11pt;
     font-family: Verdana, Helvetica, Arial, Tahoma, sans-serif;
-    color: #000000;
-    background-color: #ffffff;
+    color: black;
+    background-color: white;
 }
 
-A:link {
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:link {
     font-size: 10pt;
-    font-weight: normal;
-    color: #333;
-    text-decoration: none;
-}
-
-a:visited {
-    color: #333;
-    text-decoration: none;
-    font-weight: normal;
-}
-
-a:active {
-    font-weight: normal;
-    color: #333;
-    text-decoration: none;
 }
 
 a:hover {
     font-weight: bold;
-    text-decoration: none;
-}
-
-.sender {
-    font-weight: normal;
+    color: black;
 }

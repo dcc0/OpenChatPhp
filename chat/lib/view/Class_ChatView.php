@@ -7,6 +7,7 @@ class ChatView
     private const QUERY_MESSAGES = 'select * from chat where id > ? and chatname = ? order by id limit 15';
     private static function channels(): array
     {
+        $all_channels = [];
         $show_channels = Database::connect()->query(self::QUERY_CHANNELS)->fetchAll();
         foreach ($show_channels as $row) {
             $all_channels[] = $row->chatname;
