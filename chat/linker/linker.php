@@ -1,6 +1,4 @@
 <?php
-//Закроем прямой доступ к странице
-require_once 'close_page.php';
 require_once STYLE . 'header.html';
 
 //Окно чата
