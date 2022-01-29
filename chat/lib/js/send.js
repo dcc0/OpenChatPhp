@@ -6,7 +6,7 @@ function loadDoc2() {
         param3 = document.getElementById("channel").value,
         param4 = document.getElementById("pass").value;
 
-    xhttp.open('GET', "./lib/Class_Send_Messages.php?text=" + encodeURIComponent(param) + "&userlogin=" + encodeURIComponent(param2) + "&channel=" + encodeURIComponent(param3) + "&pass=" + encodeURIComponent(param4), true);
+    xhttp.open('GET', "./lib/messages.php?text=" + encodeURIComponent(param) + "&userlogin=" + encodeURIComponent(param2) + "&channel=" + encodeURIComponent(param3) + "&pass=" + encodeURIComponent(param4), true);
     xhttp.send();
     document.getElementById('text').value = "";
 

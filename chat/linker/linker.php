@@ -20,6 +20,6 @@ require_once LIBJS . 'send.js';
 echo '</script>';
 
 //Удаление BACKENED
-require_once LIB . 'Class_Count_Delete_Messages.php';
+require_once LIB . 'Class_Messages.php';
 require_once STYLE . 'footer.html';
 

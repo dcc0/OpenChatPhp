@@ -1,12 +1,7 @@
 <?php
-
+require_once 'Class_Config.php';
 class Database
 {
-    private const HOST = '';
-    private const USER = '';
-    private const PASS = '';
-    private const DB = '';
-    private const PORT = '';
     private static ?self $link;
     private PDO $db;
 
@@ -19,8 +14,8 @@ class Database
     //PDO упрощает подготовленные выражения.
     private function init()
     {
-        $dsn = 'mysql:dbname=' . self::DB . ';host=' . self::HOST . ';port=' . self::PORT . ';charset=utf8mb4;';
-        $this->db = new PDO($dsn, self::USER, self::PASS);
+        $dsn = 'mysql:dbname=' . Config::db()->database . ';host=' . Config::db()->host . ';port=' . Config::db()->port . ';charset=utf8mb4;';
+        $this->db = new PDO($dsn, Config::db()->user, Config::db()->password);
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
@@ -33,10 +28,6 @@ class Database
         return self::$link;
     }
 
-    public function getConnection()
-    {
-        return $this->link;
-    }
     //Подготовленные запросы
     public function query(string $query, $values = null)
     {

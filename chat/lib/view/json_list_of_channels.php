@@ -1,3 +1,3 @@
 <?php
-    require_once 'Class_ListChannels.php';
-    print json_encode(ListChannels::getChannels());
+require_once 'Class_ChatView.php';
+print ChatView::getChannelsInJson();

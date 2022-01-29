@@ -32,7 +32,7 @@ function update() {
         last_message_id = 0;
 
     //Запрос (с выводом только последних)
-    xmlhttp.open('GET', "/chat/lib/view/Class_Printing.php?last_message_id=" + last_message_id + "&channel=" + channel, true);
+    xmlhttp.open('GET', "/chat/lib/view/printing.php?last_message_id=" + last_message_id + "&channel=" + channel, true);
 
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
