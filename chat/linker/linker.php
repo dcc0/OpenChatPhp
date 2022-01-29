@@ -1,4 +1,7 @@
 <?php
+//Удаление BACKENED
+require_once LIB . 'Class_Messages.php';
+
 require_once STYLE . 'header.html';
 
 //Окно чата
@@ -16,8 +19,4 @@ require_once LIBJS . 'cross_object.js';
 //Отправка FRONTED
 require_once LIBJS . 'send.js';
 echo '</script>';
-
-//Удаление BACKENED
-require_once LIB . 'Class_Messages.php';
-require_once STYLE . 'footer.html';
 
