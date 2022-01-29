@@ -1,37 +1,20 @@
 body {
-	font-size: 11pt; font-family: Verdana, Helvetica, Arial, Tahoma, sans-serif;
-color: #000000;
-background-color: #ffffff;
+    font-size: 11pt;
+    font-family: Verdana, Helvetica, Arial, Tahoma, sans-serif;
+    color: black;
+    background-color: white;
 }
 
-
-
-A:link {
-font-size: 10pt;
-	font-weight: normal;
-	color: #333;
-	text-decoration: none;
+a {
+    text-decoration: none;
+    color: #333;
 }
 
-a:visited {
-	color: #333; 
-	text-decoration: none;
-         font-weight: normal;
+a:link {
+    font-size: 10pt;
+}
 
-}
-a:active {
-	font-weight: normal;
-	color: #333;
-	text-decoration: none;
-}
 a:hover {
-font-weight: bold;
-text-decoration: none;
+    font-weight: bold;
+    color: black;
 }
-
-.sender {
-    font-weight: normal;
-    
-    
-}    
-

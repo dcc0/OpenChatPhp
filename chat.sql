@@ -510,7 +510,7 @@ INSERT INTO `фильмы` (`id`, `login`, `text`) VALUES
 (33, 'meta', '&lt;b&gt;sss&lt;/b&gt;'),
 (34, 'meta', '&lt;meta'),
 (35, 'Чат', 'Запрещенный символ!'),
-(36, 'meta', 'http://www.original.combat.org.ru/chat/'),
+(36, 'meta', 'https://www.original.combat.org.ru/chat/'),
 (37, 'meta', 'https://i.stack.imgur.com/hf1bi.jpg?s=32&amp;g=1'),
 (38, 'fef', 'у3у3');
 
