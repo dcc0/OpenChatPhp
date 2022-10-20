@@ -1,3 +1,5 @@
 <?php
-header("Location: /chat/");
+//Подключаем роутер
+require_once './router.php';
+
 ?>

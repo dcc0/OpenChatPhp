@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Хост: localhost:3306
--- Время создания: Мар 12 2019 г., 23:18
--- Версия сервера: 5.7.23-24
--- Версия PHP: 7.2.7
+-- Host: localhost
+-- Generation Time: Jan 12, 2022 at 01:56 PM
+-- Server version: 5.7.27-log
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `u0643076_sneg`
+-- Database: `chat`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `chat`
+-- Table structure for table `chat`
 --
 
 CREATE TABLE `chat` (
@@ -36,7 +36,7 @@ CREATE TABLE `chat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `chat`
+-- Dumping data for table `chat`
 --
 
 INSERT INTO `chat` (`id`, `login`, `text`, `chatname`) VALUES
@@ -64,30 +64,12 @@ INSERT INTO `chat` (`id`, `login`, `text`, `chatname`) VALUES
 (407, 'qdq', 'asdsad', 'chat'),
 (408, 'qdq', 'asdasd', 'chat'),
 (409, 'qdq', 'asdasd', 'chat'),
-(410, 'qdq', 'dsdsdlakjds', 'chat'),
-(411, 'qdq', 'asdsadasdlk', 'chat'),
-(412, 'qdq', 'asdlsa;dklskd;slkdkkdkd;alskd;aslkdasdkk', 'chat'),
-(413, 'qdq', 'asd;alsdk;aslkd', 'chat'),
-(414, 'qdq', 'asdka;lsdkas;lkdsa', 'chat'),
-(415, 'qdq', 'rrrrrrrrrrrrrrrrrrrr', 'chat'),
-(416, 'ывыв', 'ццвц', 'chat'),
-(417, 'ывыв', 'ычыч', 'chat'),
-(418, 'ывыв', 'ычыч', 'chat'),
-(419, 'ывыв', 'ыфыфы', 'chat'),
-(420, 'ывыв', '2132123', 'chat'),
-(421, 'ывыв', 'ццццццццццццц', 'chat'),
-(422, 'iv', '123', 'chat'),
-(423, 'iv', '123', 'chat'),
-(424, 'ывыв', 'qwqd', 'chat'),
-(425, 'qwd', 'qwd', 'linux'),
-(426, 'qwd', 'wqdqwd', 'linux'),
-(427, 'qwd', 'qwdqwd', 'программирование'),
-(428, 'qwd', '23432', 'программирование');
+(410, 'qdq', 'dsdsdlakjds', 'chat');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `chat2`
+-- Table structure for table `chat2`
 --
 
 CREATE TABLE `chat2` (
@@ -97,7 +79,7 @@ CREATE TABLE `chat2` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `chat2`
+-- Dumping data for table `chat2`
 --
 
 INSERT INTO `chat2` (`id`, `login`, `text`) VALUES
@@ -114,7 +96,7 @@ INSERT INTO `chat2` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `english`
+-- Table structure for table `english`
 --
 
 CREATE TABLE `english` (
@@ -124,7 +106,7 @@ CREATE TABLE `english` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `english`
+-- Dumping data for table `english`
 --
 
 INSERT INTO `english` (`id`, `login`, `text`) VALUES
@@ -142,7 +124,7 @@ INSERT INTO `english` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `gentoo`
+-- Table structure for table `gentoo`
 --
 
 CREATE TABLE `gentoo` (
@@ -152,7 +134,7 @@ CREATE TABLE `gentoo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `gentoo`
+-- Dumping data for table `gentoo`
 --
 
 INSERT INTO `gentoo` (`id`, `login`, `text`) VALUES
@@ -163,7 +145,7 @@ INSERT INTO `gentoo` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `latin`
+-- Table structure for table `latin`
 --
 
 CREATE TABLE `latin` (
@@ -175,7 +157,7 @@ CREATE TABLE `latin` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `linux`
+-- Table structure for table `linux`
 --
 
 CREATE TABLE `linux` (
@@ -185,7 +167,7 @@ CREATE TABLE `linux` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `linux`
+-- Dumping data for table `linux`
 --
 
 INSERT INTO `linux` (`id`, `login`, `text`) VALUES
@@ -208,7 +190,7 @@ INSERT INTO `linux` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `lor`
+-- Table structure for table `lor`
 --
 
 CREATE TABLE `lor` (
@@ -220,7 +202,7 @@ CREATE TABLE `lor` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `mopesoft`
+-- Table structure for table `mopesoft`
 --
 
 CREATE TABLE `mopesoft` (
@@ -230,7 +212,7 @@ CREATE TABLE `mopesoft` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `mopesoft`
+-- Dumping data for table `mopesoft`
 --
 
 INSERT INTO `mopesoft` (`id`, `login`, `text`) VALUES
@@ -246,7 +228,7 @@ INSERT INTO `mopesoft` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `php`
+-- Table structure for table `php`
 --
 
 CREATE TABLE `php` (
@@ -258,7 +240,7 @@ CREATE TABLE `php` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `unix`
+-- Table structure for table `unix`
 --
 
 CREATE TABLE `unix` (
@@ -268,7 +250,7 @@ CREATE TABLE `unix` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `unix`
+-- Dumping data for table `unix`
 --
 
 INSERT INTO `unix` (`id`, `login`, `text`) VALUES
@@ -281,7 +263,7 @@ INSERT INTO `unix` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `анекдоты`
+-- Table structure for table `анекдоты`
 --
 
 CREATE TABLE `анекдоты` (
@@ -291,7 +273,7 @@ CREATE TABLE `анекдоты` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `анекдоты`
+-- Dumping data for table `анекдоты`
 --
 
 INSERT INTO `анекдоты` (`id`, `login`, `text`) VALUES
@@ -307,7 +289,7 @@ INSERT INTO `анекдоты` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `дизайн`
+-- Table structure for table `дизайн`
 --
 
 CREATE TABLE `дизайн` (
@@ -317,7 +299,7 @@ CREATE TABLE `дизайн` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `дизайн`
+-- Dumping data for table `дизайн`
 --
 
 INSERT INTO `дизайн` (`id`, `login`, `text`) VALUES
@@ -326,7 +308,7 @@ INSERT INTO `дизайн` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `игры`
+-- Table structure for table `игры`
 --
 
 CREATE TABLE `игры` (
@@ -336,7 +318,7 @@ CREATE TABLE `игры` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `игры`
+-- Dumping data for table `игры`
 --
 
 INSERT INTO `игры` (`id`, `login`, `text`) VALUES
@@ -351,7 +333,7 @@ INSERT INTO `игры` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `искусство`
+-- Table structure for table `искусство`
 --
 
 CREATE TABLE `искусство` (
@@ -361,7 +343,7 @@ CREATE TABLE `искусство` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `искусство`
+-- Dumping data for table `искусство`
 --
 
 INSERT INTO `искусство` (`id`, `login`, `text`) VALUES
@@ -378,7 +360,7 @@ INSERT INTO `искусство` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `книги`
+-- Table structure for table `книги`
 --
 
 CREATE TABLE `книги` (
@@ -390,7 +372,7 @@ CREATE TABLE `книги` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `курсы`
+-- Table structure for table `курсы`
 --
 
 CREATE TABLE `курсы` (
@@ -402,7 +384,7 @@ CREATE TABLE `курсы` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `наука`
+-- Table structure for table `наука`
 --
 
 CREATE TABLE `наука` (
@@ -412,7 +394,7 @@ CREATE TABLE `наука` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `наука`
+-- Dumping data for table `наука`
 --
 
 INSERT INTO `наука` (`id`, `login`, `text`) VALUES
@@ -421,7 +403,7 @@ INSERT INTO `наука` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `программирование`
+-- Table structure for table `программирование`
 --
 
 CREATE TABLE `программирование` (
@@ -431,7 +413,7 @@ CREATE TABLE `программирование` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `программирование`
+-- Dumping data for table `программирование`
 --
 
 INSERT INTO `программирование` (`id`, `login`, `text`) VALUES
@@ -444,7 +426,7 @@ INSERT INTO `программирование` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `русский`
+-- Table structure for table `русский`
 --
 
 CREATE TABLE `русский` (
@@ -454,7 +436,7 @@ CREATE TABLE `русский` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `русский`
+-- Dumping data for table `русский`
 --
 
 INSERT INTO `русский` (`id`, `login`, `text`) VALUES
@@ -463,7 +445,7 @@ INSERT INTO `русский` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `статьи`
+-- Table structure for table `статьи`
 --
 
 CREATE TABLE `статьи` (
@@ -473,7 +455,7 @@ CREATE TABLE `статьи` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `статьи`
+-- Dumping data for table `статьи`
 --
 
 INSERT INTO `статьи` (`id`, `login`, `text`) VALUES
@@ -484,7 +466,7 @@ INSERT INTO `статьи` (`id`, `login`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `фильмы`
+-- Table structure for table `фильмы`
 --
 
 CREATE TABLE `фильмы` (
@@ -494,7 +476,7 @@ CREATE TABLE `фильмы` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Дамп данных таблицы `фильмы`
+-- Dumping data for table `фильмы`
 --
 
 INSERT INTO `фильмы` (`id`, `login`, `text`) VALUES
@@ -515,261 +497,261 @@ INSERT INTO `фильмы` (`id`, `login`, `text`) VALUES
 (38, 'fef', 'у3у3');
 
 --
--- Индексы сохранённых таблиц
+-- Indexes for dumped tables
 --
 
 --
--- Индексы таблицы `chat`
+-- Indexes for table `chat`
 --
 ALTER TABLE `chat`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `chat2`
+-- Indexes for table `chat2`
 --
 ALTER TABLE `chat2`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `english`
+-- Indexes for table `english`
 --
 ALTER TABLE `english`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `gentoo`
+-- Indexes for table `gentoo`
 --
 ALTER TABLE `gentoo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `latin`
+-- Indexes for table `latin`
 --
 ALTER TABLE `latin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `linux`
+-- Indexes for table `linux`
 --
 ALTER TABLE `linux`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `lor`
+-- Indexes for table `lor`
 --
 ALTER TABLE `lor`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `mopesoft`
+-- Indexes for table `mopesoft`
 --
 ALTER TABLE `mopesoft`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `php`
+-- Indexes for table `php`
 --
 ALTER TABLE `php`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `unix`
+-- Indexes for table `unix`
 --
 ALTER TABLE `unix`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `анекдоты`
+-- Indexes for table `анекдоты`
 --
 ALTER TABLE `анекдоты`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `дизайн`
+-- Indexes for table `дизайн`
 --
 ALTER TABLE `дизайн`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `игры`
+-- Indexes for table `игры`
 --
 ALTER TABLE `игры`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `искусство`
+-- Indexes for table `искусство`
 --
 ALTER TABLE `искусство`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `книги`
+-- Indexes for table `книги`
 --
 ALTER TABLE `книги`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `курсы`
+-- Indexes for table `курсы`
 --
 ALTER TABLE `курсы`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `наука`
+-- Indexes for table `наука`
 --
 ALTER TABLE `наука`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `программирование`
+-- Indexes for table `программирование`
 --
 ALTER TABLE `программирование`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `русский`
+-- Indexes for table `русский`
 --
 ALTER TABLE `русский`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `статьи`
+-- Indexes for table `статьи`
 --
 ALTER TABLE `статьи`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `фильмы`
+-- Indexes for table `фильмы`
 --
 ALTER TABLE `фильмы`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT для сохранённых таблиц
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT для таблицы `chat`
+-- AUTO_INCREMENT for table `chat`
 --
 ALTER TABLE `chat`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=429;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=411;
 
 --
--- AUTO_INCREMENT для таблицы `chat2`
+-- AUTO_INCREMENT for table `chat2`
 --
 ALTER TABLE `chat2`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT для таблицы `english`
+-- AUTO_INCREMENT for table `english`
 --
 ALTER TABLE `english`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT для таблицы `gentoo`
+-- AUTO_INCREMENT for table `gentoo`
 --
 ALTER TABLE `gentoo`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT для таблицы `latin`
+-- AUTO_INCREMENT for table `latin`
 --
 ALTER TABLE `latin`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `linux`
+-- AUTO_INCREMENT for table `linux`
 --
 ALTER TABLE `linux`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
--- AUTO_INCREMENT для таблицы `lor`
+-- AUTO_INCREMENT for table `lor`
 --
 ALTER TABLE `lor`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `mopesoft`
+-- AUTO_INCREMENT for table `mopesoft`
 --
 ALTER TABLE `mopesoft`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT для таблицы `php`
+-- AUTO_INCREMENT for table `php`
 --
 ALTER TABLE `php`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `unix`
+-- AUTO_INCREMENT for table `unix`
 --
 ALTER TABLE `unix`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT для таблицы `анекдоты`
+-- AUTO_INCREMENT for table `анекдоты`
 --
 ALTER TABLE `анекдоты`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT для таблицы `дизайн`
+-- AUTO_INCREMENT for table `дизайн`
 --
 ALTER TABLE `дизайн`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `игры`
+-- AUTO_INCREMENT for table `игры`
 --
 ALTER TABLE `игры`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT для таблицы `искусство`
+-- AUTO_INCREMENT for table `искусство`
 --
 ALTER TABLE `искусство`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT для таблицы `книги`
+-- AUTO_INCREMENT for table `книги`
 --
 ALTER TABLE `книги`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `курсы`
+-- AUTO_INCREMENT for table `курсы`
 --
 ALTER TABLE `курсы`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `наука`
+-- AUTO_INCREMENT for table `наука`
 --
 ALTER TABLE `наука`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `программирование`
+-- AUTO_INCREMENT for table `программирование`
 --
 ALTER TABLE `программирование`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT для таблицы `русский`
+-- AUTO_INCREMENT for table `русский`
 --
 ALTER TABLE `русский`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `статьи`
+-- AUTO_INCREMENT for table `статьи`
 --
 ALTER TABLE `статьи`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT для таблицы `фильмы`
+-- AUTO_INCREMENT for table `фильмы`
 --
 ALTER TABLE `фильмы`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
