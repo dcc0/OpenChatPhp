@@ -38,6 +38,9 @@ ivangavr777@gmail.com П
 9) Выделение текста жирным, курсивом или цветом
 с помощью следующего кода: b->жирный, i->курсив,
 color->red->красный текст
+10) Можно отправить приватный alert пользователю.
+Синтаксис: alert->user->Привет!
+
 
 Installaton
 1) Upload files to your server
@@ -51,4 +54,5 @@ Server must support ModRewrite
 8) Number of all messges in lib/Class_Count_Delete_Messages.php
 9) You can change text style, using the following code:b->bold, i->italic,
 color->red->red text
-
+10) There is a possibility to send a private alert to a user. 
+Syntax: alert->user->Hello!
