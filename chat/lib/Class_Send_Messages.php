@@ -64,7 +64,7 @@ class Send_Messages
 
 
 
-    public function sendText($gettext, $userlogin, $channel, $all_channels_array, $pass)
+    public function sendText($gettext, $userlogin, $channel, $all_channels_array, $pass, $pass_create_channel)
 
       {
 
@@ -77,7 +77,7 @@ class Send_Messages
 
           }
 
-          if (md5($pass)=='36c07e47c3d7b0d2d48f2bc25d027f29')
+          if (strcmp(md5($pass), $pass_create_channel) == 0)
           $this->my_channel  = $channel;
 
             //Обрежем ник и сообщение
@@ -101,8 +101,9 @@ class Send_Messages
 //Коннект к базе
 $connection_to = new Connect();
 /*Отправим сообщения*/
+$pass_create_channel = $connection_to->getPasscreatechannel();
 $send_messages = new Send_Messages($connection_to);
-$send_messages->sendText(htmlspecialchars($gettext), $userlogin, trim($_GET['channel']), $all_channels_array, $pass);
+$send_messages->sendText(htmlspecialchars($gettext), $userlogin, trim($_GET['channel']), $all_channels_array, $pass, $pass_create_channel);
 /*Удалим лишние*/
 require_once 'Class_Count_Delete_Messages.php';
 ?>

@@ -5,9 +5,10 @@ class Connect {
 
 	public static $link;
 	protected $host = 'localhost';
-	protected $user = 'u0643076_sneg';
-	protected $password = '?wZ545i9KcT3';
-	protected $db_name = 'u0643076_sneg';
+	protected $user = 'root';
+	protected $password = '123';
+	protected $db_name = 'chat';
+	protected $pass_create_channel = '202cb962ac59075b964b07152d234b70';
 
     public function __construct () {
 
@@ -21,7 +22,11 @@ class Connect {
 
 		}
 
+	  function getPasscreatechannel() {
 
+	return $this->pass_create_channel;
+
+		}
 
 	}
 

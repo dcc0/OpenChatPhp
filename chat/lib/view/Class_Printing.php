@@ -20,8 +20,8 @@ class Printing
     protected $fetch;
     protected $my_channel;
     protected $new_cyle;
-	
-	
+
+
     public function __construct($mysql, $new_cyle)
       {
         $connection = $mysql->getConnection();
@@ -32,29 +32,27 @@ class Printing
         $this->connection = $mysql->getConnection();
 		$this->new_cyle=$new_cyle;
       }
-	
-	
+
+
     /*Запрашиваем последние 15 сообщений*/
     private function fetchingOut($last_message_id, $channel)
       {
             $this->my_channel=$channel;
             //Запрос
-            $stmt=$this->fetch = $this->connection->prepare("SELECT * from chat WHERE id > ? AND chatname = ? ORDER by id ASC LIMIT 15");
+            $stmt=$this->fetch = $this->connection->prepare("SELECT * from chat WHERE id > ? AND chatname = ? ORDER by id ASC LIMIT 50");
             $stmt->bind_param('ds',  $last_message_id, $channel);
             $stmt->execute();
             $result=$stmt->get_result();
             return  $result;
-            
-	//В комментарии ниже историческое название метода
-	//return $this->new_cyle->startCycleFetchAssocAndReturnJsonFromClassChatUsingMethodPrintingOutAndDontBeSoSeriousHaveANiceDay( $result);
-				
+
+
     }
-	
-	
+
+
     public function printingOut($last_id, $channel)
       {
         $data = $this->fetchingOut($last_id, $channel);
-        //Непосредственно цикл вывода из другого класса. Class_Cycle.php        
+        //Непосредственно цикл вывода из другого класса. Class_Cycle.php
          return json_encode($this->new_cyle->FethcAssocArrayReturnJson($data));
       }
   }
@@ -65,7 +63,7 @@ $connection_to = new Connect();
 //Новый контекст для цикла
 $new_cyle = new Cycle($array_for_cycle, $mybject);
 //Вывод
-$data          = new Printing($connection_to, $new_cyle);
+$data     = new Printing($connection_to, $new_cyle);
 
 //Запрос последних сообщний. Парамерт номер последненего сообщения
 $newarr_data=$data->printingOut($_GET['last_message_id'],trim($_GET['channel']));
