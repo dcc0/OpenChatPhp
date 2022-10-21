@@ -41,10 +41,13 @@ function update() {
 				var i;
 				var itm;
 				var cln;
+				//alert(mydata[mydata]);
 				//Проверим массив/Check the array
 				if(mydata) {
-					//Номер последнего сообщения/Number of last message
+				//Номер последнего сообщения/Number of last message
+					if (mydata[mydata.length - 1] !== undefined) {
 					window.last_message_id = mydata[mydata.length - 1].id;
+					}
 					//span для клонирования имени и текста сообщения
 					var span_sender;
 					var span_text;
