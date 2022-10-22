@@ -1,12 +1,12 @@
-/*
-  <script type="text/javascript">
 
+  <script type="text/javascript">
+/*
             window.onload = function(){
 
                 document.getElementById('updatebox').scrollTop = 9999999;
 
             }
 
-
-  </script>
 */
+  </script>
+
