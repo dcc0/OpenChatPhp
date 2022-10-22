@@ -113,11 +113,12 @@ function update() {
 							span_text.innerHTML = withlink + '<br/>'; //Добавим текст и перенос строки
 							itm.appendChild(span_sender); //Добавим span_sender к div
 							itm.appendChild(span_text); //Добавим text к div
+							//Прижать scroll
+							document.getElementById('updatebox').scrollTop = 9999999;
+							window.channel_for_id_1 = channel;
 						}
 					}
-					//Прижать scroll
-					document.getElementById('updatebox').scrollTop = 9999999;
-					window.channel_for_id_1 = channel;
+
 				}
 			}
 		}
