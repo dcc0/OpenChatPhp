@@ -53,7 +53,7 @@ Server must support ModRewrite
 5) You can add password in a file: conf/Class_Connect.php
 6) You can edit numbers of chat rooms in the following file: lib/view/Class_ListChannels.php, line number 30 - "chat LIMIT 100"
 7) In conf/Class_Connect.php you can set a password for creating channels
-8) Number of all messges in: lib/Class_Count_Delete_Messages.php
+8) Number of all messges in: lib/Class_Count_Delete_Messages.php (line 60)
 9) You can change text style, using the following code:b->bold, i->italic,
 color->red->red text
 10) There is a possibility to send a private alert to a user. Syntax: alert->user->Hello!
