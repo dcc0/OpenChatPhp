@@ -22,8 +22,8 @@ CSS (ccs3)
 
 Возможность использования в локальной сети! Экономия трафика! Минимум дизайна для самостоятельной настройки!
 По всем вопросам:
-ivangavr777@gmail.com П
-пример работы чата: http://comb.org.ru/chat/index.php
+ivangavr777@gmail.com
+Пример работы чата: http://comb.org.ru/chat/index.php
 
 
 Установка
