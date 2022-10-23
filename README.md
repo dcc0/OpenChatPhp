@@ -1,8 +1,8 @@
 OpenChatPhp - описание, установка и настройка
 
 Open Chat Multichannel. Written: 2019. MSK. Многоканальный открытый веб-чат
-Functions/Функции
 
+Functions/Функции
 You can post/Возможности публикации
 Messages/Сообщений
 Images/Изображений
