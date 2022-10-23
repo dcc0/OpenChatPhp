@@ -1,8 +1,9 @@
 OpenChatPhp - описание, установка и настройка
 
-Open Chat Multichannel. Written: 2019. MSK. Многоканальный открытый веб-чат
+Open Chat Multichannel. Многоканальный открытый веб-чат
+
 Functions/Функции
-You can post:/Возможности публикации
+You can post/Возможности публикации
 Messages/Сообщений
 Images/Изображений
 Links/Ссылок
@@ -19,9 +20,10 @@ CSS (ccs3)
 Для работы с закрытым каналом требуется указать общий пароль (по умолчанию: 123).
 Пароль устанавливается в файле: conf/Class_Connect, строка protected $pass_create_channel, используется шифрование  md5
 
-Возможность использования в локальной сети - экономия трафика!. Минимум дизайна для самостоятельной настройки!
-По всем вопросам: ivangavr777@gmail.com 
-Пример работы чата: http://comb.org.ru/chat/index.php
+Возможность использования в локальной сети! Экономия трафика! Минимум дизайна для самостоятельной настройки!
+По всем вопросам:
+ivangavr777@gmail.com П
+пример работы чата: http://comb.org.ru/chat/index.php
 
 
 Установка
@@ -61,3 +63,5 @@ color->red->red text
 10) There is a possibility to send a private alert to a user. Syntax: alert->user->Hello!
 11) Max number of symbols is 500.
 You can edit message length in: lib/Class_Send_Messages.php, line 84 (substr($gettext, 0, 500);)
+
+2019. MSK.
