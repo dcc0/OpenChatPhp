@@ -1,6 +1,6 @@
 OpenChatPhp - описание, установка и настройка
 
-Open Chat Multichannel. Written: 2019. MSK. Многоканальный открытый веб-чат
+Open Chat Multichannel. Многоканальный открытый веб-чат
 
 Functions/Функции
 You can post/Возможности публикации
@@ -63,3 +63,5 @@ color->red->red text
 10) There is a possibility to send a private alert to a user. Syntax: alert->user->Hello!
 11) Max number of symbols is 500.
 You can edit message length in: lib/Class_Send_Messages.php, line 84 (substr($gettext, 0, 500);)
+
+2019. MSK.
