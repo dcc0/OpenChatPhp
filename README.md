@@ -6,11 +6,12 @@ You can post:/Возможности публикации
 Messages/Сообщений
 Images/Изображений
 Links/Ссылок
-Create Channels/Создание каналов.
-Short tags/Собственный способ оформления текста (например, жирный: b->текст; курсив i->текст; color->blue->какой-то текст )
+Create Channels/Создание каналов
+Short tags/Собственный способ оформления текста
+
 Stack/Технологии:
-PHP (MVL (Closer to MVC) like, Object Oriented Programming. PHP7)
-MysqLi (Prepared statements - отличная защита от sql-атак)
+PHP (MVC like), OOP. PHP7)
+MysqLi (Prepared statements)
 Ajax (XMLHttp)
 HTML (html5)
 CSS (ccs3)
@@ -19,9 +20,8 @@ CSS (ccs3)
 Пароль устанавливается в файле: conf/Class_Connect, строка protected $pass_create_channel, используется шифрование  md5
 
 Возможность использования в локальной сети - экономия трафика!. Минимум дизайна для самостоятельной настройки!
-По всем вопросам:
-ivangavr777@gmail.com П
-пример работы чата: http://comb.org.ru/chat/index.php
+По всем вопросам: ivangavr777@gmail.com 
+Пример работы чата: http://comb.org.ru/chat/index.php
 
 
 Установка
