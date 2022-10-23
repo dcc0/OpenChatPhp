@@ -31,7 +31,7 @@ ivangavr777@gmail.com П
 Сервер должен поддерживать mod rewrite
 4) База данных в chat.sql. Загрузите через phpmyadmin
 5) Пароль можно задать в файле: conf/Class_Connect.php
-6) Количество видимых комнат чата можно отредактировать в файле: lib/view/Class_ListChannels.php, line number 30 - "chat LIMIT 100"
+6) Количество видимых комнат чата можно отредактировать в файле: lib/view/Class_ListChannels.php, строка номер 30 - "chat LIMIT 100"
 7) В conf/Class_Connect.php теперь можно настроить пароль для создания канала
 8) Количество всех сообщений чата настраивается
 в файле: lib/Class_Count_Delete_Messages.php, строка 60
