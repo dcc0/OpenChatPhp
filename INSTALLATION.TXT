@@ -18,6 +18,12 @@ color->red->красный текст
 11) Максимальная длина сообщения 500 символов. Длину сообщения
 можно изменить в файле: lib/Class_Send_Messages.php на строке 84
 (substr($gettext, 0, 500);)
+12) Возможность настроить обновление окна браузера (по умолчанию 30 минут).
+Настраивается в файле: lib/js/cross_object.js, на строке 129 
+('refresh()', 1800000000);)
+13) Возможность настроить интервал проверки новых сообщений в
+файле: lib/js/cross_object.js, на строке 135 
+(var time = 3000;) 
 
 Installaton
 1) Upload files to your server
@@ -35,3 +41,9 @@ color->red->red text
 10) There is a possibility to send a private alert to a user. Syntax: alert->user->Hello!
 11) Max number of symbols is 500.
 You can edit message length in: lib/Class_Send_Messages.php, line 84 (substr($gettext, 0, 500);)
+12) You can set an interval for refreshing the window in a file: 
+lib/js/cross_object.js, line 129 
+('refresh()', 1800000000);)
+13) You can set an interval for checking new messages in a file: 
+lib/js/cross_object.js, line 135 
+(var time = 3000;) 
