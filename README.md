@@ -46,6 +46,12 @@ color->red->красный текст
 11) Максимальная длина сообщения 500 символов. Длину сообщения
 можно изменить в файле: lib/Class_Send_Messages.php на строке 84
 (substr($gettext, 0, 500);)
+12) Возможность настроить обновление окна браузера (по умолчанию 30 минут).
+Настраивается в файле: lib/js/cross_object.js, на строке 129 
+('refresh()', 1800000000);)
+13) Возможность настроить интервал проверки новых сообщений в
+файле: lib/js/cross_object.js, на строке 135 
+(var time = 3000;) 
 
 Installaton
 1) Upload files to your server
@@ -63,5 +69,22 @@ color->red->red text
 10) There is a possibility to send a private alert to a user. Syntax: alert->user->Hello!
 11) Max number of symbols is 500.
 You can edit message length in: lib/Class_Send_Messages.php, line 84 (substr($gettext, 0, 500);)
+12) You can set an interval for refreshing the window in a file: 
+lib/js/cross_object.js, line 129 
+('refresh()', 1800000000);)
+13) You can set an interval for checking new messages in a file: 
+lib/js/cross_object.js, line 135 
+(var time = 3000;) 
 
-2019. MSK.
+2019. MSK
+
+Дополнительное описание
+Система состоит из двух частей, серверной и клиентской.
+Серверная часть написана архитектурным подходом на языке PHP7 с  использованием классов. Совместима с более ранними версиями языка PHP. 
+Клиентская часть написана на Ajax (JavaScript).
+Механика системы: клиентское приложение (браузер с поддержкой Ajax)
+раз в три секунды опрашивает сервер и печатает последние сообщения.
+При отправке сообщения на стороне сервера проверяется количество
+сообщений в базе данных, если их число больше n, то более ранние сообщения
+удаляются 
+  
