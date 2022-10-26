@@ -13,9 +13,9 @@ $connection_to->getConnection();
 // Маршруты
 $routes = [
 
-
+	//Для директории chat
 	'/chat/' => 'linker',
-
+	//Для самого файла с роутером
     '/router' => 'linker'
 
 ];
@@ -32,6 +32,7 @@ function getMethod(array $routes, $path) {
         if ($path === $route) {
             return $method;
         }
+
     }
 
     return 'notFound';
@@ -44,7 +45,7 @@ function index() {
 }
 
 
-
+//3. Функция для вызова линковщика
 function linker() {
      require_once './linker/linker.php';
 
@@ -52,17 +53,18 @@ function linker() {
 
 
 
-
+//При попытке вызвать сам router.php
 function notFound() {
     header("HTTP/1.0 404 Not Found");
-
     return 'Нет такой страницы';
 }
 
 
 $path = getRequestPath();
 
+//2. Опредилим, какую функцию вызвать
 $method = getMethod($routes, $path);
 
+//1. Вызов линковщика
 echo $method();
 ?>
