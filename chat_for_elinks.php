@@ -1,13 +1,19 @@
 Если не работает JavaScript, для можно использовать данный скрипт для чата. После 30 сообщений файл очищается.
-<form  method="POST" action="chat2.php"> 			
+<form  method="POST" action="chat2.php">
+	Имя:<br/>
+	<input type="text" id="name" name="name" size="100%"  maxlength="500"><br/>
+	Сообщение:<br/>	 			
 	<input type="text" id="text" name="text" size="100%"  maxlength="500"><br/>	
 	<input  type="submit" name="submit" value="Send">
 </form>
 
-<?php
+<?php 
+
+
 //Обрежем запрос POST до 500 символов
 $_POST['text']=mb_substr($_POST['text'], 0,500, 'UTF-8');
-$str2 = $_POST['text'];
+$_POST['name']=mb_substr($_POST['name'], 0,500, 'UTF-8');
+$str2 = $_POST['name'] . '-> ' . $_POST['text'];
 //Запишем сообщение в файл
 
 if (isset($_POST['submit']) && !empty($_POST['text']) && $_POST['text'] !='') {
@@ -36,7 +42,6 @@ if (count($text) > 30)  {
 	$f = fopen('chat.txt', 'w');
 	fclose($f);
 }
-
 
 //Вывод сообщений
 	$text=array_reverse($text);
